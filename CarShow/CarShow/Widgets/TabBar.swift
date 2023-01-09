@@ -13,13 +13,20 @@ struct TabBar: View {
     var body: some View {
         HStack() {
             ForEach(Array(titles.enumerated()), id: \.offset) { (index, title) in
-                Button {
-                    selectedIndex = index
-                } label: {
-                    Text(title)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.black).opacity(selectedIndex == index ? 1 : 0.6)
-                        .padding(.horizontal,10)
+                VStack(spacing: 2) {
+                    Button {
+                        selectedIndex = index
+                    } label: {
+                        Text(title)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.black).opacity(selectedIndex == index ? 1 : 0.6)
+                            .padding(.horizontal,10)
+                    }
+                    if index == selectedIndex {
+                        Color(uiColor: .black)
+                            .frame(width: 20,height: 3)
+                            .clipShape(Capsule())
+                    }
                 }
             }
         }

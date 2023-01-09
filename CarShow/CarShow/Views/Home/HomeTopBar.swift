@@ -11,11 +11,19 @@ struct HomeTopBar: View {
     var body: some View {
         ZStack{
             Button {
-                
+
             } label: {
-                Image(systemName: "menu")
-            }.frame(maxWidth: .infinity,alignment: .leading)
+                Image("menuBar")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 50,height: 50)
+            }
+            .frame(maxWidth: .infinity,alignment: .leading)
+
+            
+            Spacer()
             Text("RMP Tesla")
+                .fontWeight(.bold)
         }
     }
 }
