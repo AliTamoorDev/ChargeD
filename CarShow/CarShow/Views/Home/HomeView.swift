@@ -13,7 +13,7 @@ struct HomeView: View {
         ZStack {
             Color(#colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1))
                 .ignoresSafeArea()
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading) {
                     HomeTopBar()
                     TabBar()

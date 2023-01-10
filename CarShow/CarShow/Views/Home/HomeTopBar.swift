@@ -16,7 +16,7 @@ struct HomeTopBar: View {
                 Image("menuBar")
             .resizable()
             .scaledToFit()
-            .frame(width: 50,height: 50)
+            .frame(width: 45,height: 35)
             }
             .frame(maxWidth: .infinity,alignment: .leading)
 
@@ -24,6 +24,7 @@ struct HomeTopBar: View {
             Spacer()
             Text("RMP Tesla")
                 .fontWeight(.bold)
+                .font(.title2)
         }
     }
 }
