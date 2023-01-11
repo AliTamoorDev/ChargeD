@@ -34,20 +34,7 @@ struct HomeView: View {
                     }
                     
                     
-                    Text("Recently Viewed")
-                        .fontWeight(.bold)
-                        .font(.title2)
-                        .padding()
-                    
-                    ScrollView(.horizontal,showsIndicators: false) {
-                        HStack {
-                            ForEach(0 ..< 5) { index in
-                                ProductView(image: Image("car"+String(index+1)))
-                            }.padding(.trailing,5)
-                        }
-                        .padding(.leading)
-                        
-                    }
+                    RecentlyViewed()
                     
                     Text("New Items")
                         .fontWeight(.bold)
@@ -109,5 +96,25 @@ struct ProductView: View {
         }
         .cornerRadius(15)
         
+    }
+}
+
+struct RecentlyViewed: View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Recently Viewed")
+                .fontWeight(.bold)
+                .font(.title2)
+                .padding()
+            ScrollView(.horizontal,showsIndicators: false) {
+                HStack {
+                    ForEach(0 ..< 5) { index in
+                        ProductView(image: Image("car"+String(index+1)))
+                    }.padding(.trailing,5)
+                }
+                .padding(.leading)
+                
+            }
+        }
     }
 }
