@@ -49,7 +49,7 @@ struct Profile: View {
                 AccountSubMenu(image: "list.bullet.rectangle", menuTitle: "Orders")
                 AccountSubMenu(image: "heart", menuTitle: "Favourites")
                 AccountSubMenu(image: "rectangle.and.pencil.and.ellipsis", menuTitle: "Reviews")
-                AccountSubMenu(image: "box.truck", menuTitle: "Shipping Address")
+                AccountSubMenu(image: "truck", imageAsset: Image("truck"), menuTitle: "Shipping Address")
                 AccountSubMenu(image: "dollarsign.circle", menuTitle: "Currency")
                 Color(uiColor: .gray)
                     .frame(maxWidth: .infinity,maxHeight: 0.3)
@@ -69,15 +69,22 @@ struct Profile_Previews: PreviewProvider {
 
 struct AccountSubMenu: View {
     var image:String
+    var imageAsset: Image?
     var menuTitle:String
     var menuSubTitle:String?
     var body: some View {
         HStack {
-            Image(systemName: image)
-                .resizable()
-                .frame(width: 25,height: 23)
-                .foregroundColor(.gray)
-                .padding()
+            if let img = imageAsset {
+                img.resizable()
+                    .frame(width: 26.5,height: 28)
+                    .foregroundColor(.gray)
+                    .padding()
+            } else {
+                Image(systemName: image).resizable()
+                    .frame(width: 25,height: 23)
+                    .foregroundColor(.gray)
+                    .padding()
+            }
             VStack(alignment: .leading) {
                 Text("\(menuTitle)")
                     .font(.title3).fontWeight(.semibold)

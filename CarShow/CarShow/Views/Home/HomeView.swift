@@ -17,6 +17,7 @@ struct HomeView: View {
                 VStack(alignment: .leading) {
                     HomeTopBar()
                     TabBar()
+                        .frame(maxWidth: .infinity,alignment: .center)
                     Spacer()
                     
                     Text("Wheel Accessories")
@@ -79,10 +80,12 @@ struct ProductView: View {
                 .frame(width: 200, height: 150)
                 .cornerRadius(15)
             Text("Center USB Hub")
-            HStack(spacing: 2) {
+            HStack(spacing: 4) {
                 ForEach(0..<5){ item in
                     Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
+                        .resizable()
+                        .foregroundColor(.black)
+                        .frame(width: 18, height: 18)
                 }
                 Spacer()
                 Text("50$")
@@ -95,7 +98,10 @@ struct ProductView: View {
             Color(.white)
         }
         .cornerRadius(15)
-        
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(.gray, lineWidth: 0.6)
+        )
     }
 }
 

@@ -45,29 +45,31 @@ struct CartProducts: View {
                 Text("50$")
                     .fontWeight(.semibold)
             }
-            .padding()
+            .padding(.horizontal)
+            .padding(.top)
             
             HStack{
                 VStack(alignment: .leading) {
                     Text("Color / Color")
                         .frame(alignment: .top)
                     Spacer()
-                    Stepper("\(productQuantity)", value: $productQuantity, in: 1...10)
+                    Stepper("\(productQuantity)x      ", value: $productQuantity, in: 1...10)
+                        .fixedSize()
                         .padding()
                 }
-                .frame(height: 120)
+                .frame(height: 95)
                 .padding(.leading)
-                
+                Spacer()
                 image
                     .resizable()
-                    .frame(width: 120, height: 120)
-                    .cornerRadius(15)
+                    .frame(width: 100, height: 95)
+                    .cornerRadius(8)
                 
             }
         }
         .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(.black, lineWidth: 0.5)
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(.black, lineWidth: 0.8)
         )
         .padding(.horizontal,10)
     }
