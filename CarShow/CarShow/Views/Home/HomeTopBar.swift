@@ -22,9 +22,13 @@ struct HomeTopBar: View {
 
             
             Spacer()
-            Text("RMP Tesla")
-                .fontWeight(.bold)
-                .font(.title2)
+//            Text("CHARG⚡️D")
+//                .fontWeight(.bold)
+//                .font(.title2)
+            Image("logo")
+                .resizable()
+                .foregroundColor(.black)
+                .frame(width: 150, height: 30)
         }
     }
 }

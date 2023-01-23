@@ -36,6 +36,7 @@ struct SearchView: View {
                 .padding(.top)
                 .padding(.horizontal)
             SearchResult(image: Image("car3"))
+            SearchResult(image: Image("car5"))
             Spacer()
         }
         
@@ -48,36 +49,39 @@ struct SearchResult: View {
         HStack(alignment: .top ) {
             image
                 .resizable()
-                .frame(width: 200, height: 150)
+                .frame(width: 165, height: 120)
                 .cornerRadius(15)
             
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
                     Text("Center USB Hub")
                         .font(.headline)
+                        .fontWeight(.medium)
+                }
+                .padding(.vertical)
+                VStack(alignment: .leading) {
+                    Button {
+
+                    } label: {
+                        Image(systemName: "heart")
+                            .resizable()
+                            .frame(width: 27,height: 25)
+                            .foregroundColor(.black)
+
+                    }
                     Text("50$")
                         .fontWeight(.semibold)
                 }
-                .padding(.vertical)
-                
-                Button {
-
-                } label: {
-                    Image(systemName: "heart")
-                        .resizable()
-                        .frame(width: 27,height: 25)
-                        .foregroundColor(.black)
-
-                }
                 .frame(maxWidth: .infinity,alignment: .trailing)
-                .padding()
+                .padding(.horizontal)
             }
         }
         .overlay(
             RoundedRectangle(cornerRadius: 16)
                 .stroke(.black, lineWidth: 0.5)
         )
-        .padding()
+        .padding(.horizontal,25)
+        .padding(.bottom,5)
 //        .background(Color(.gray))
     }
 }

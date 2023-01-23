@@ -57,12 +57,12 @@ struct CartProducts: View {
                         .fixedSize()
                         .padding()
                 }
-                .frame(height: 95)
+                .frame(height: 90)
                 .padding(.leading)
                 Spacer()
                 image
                     .resizable()
-                    .frame(width: 100, height: 95)
+                    .frame(width: 110, height: 90)
                     .cornerRadius(8)
                 
             }
@@ -71,7 +71,7 @@ struct CartProducts: View {
             RoundedRectangle(cornerRadius: 8)
                 .stroke(.black, lineWidth: 0.8)
         )
-        .padding(.horizontal,10)
+        .padding(.horizontal,25)
     }
 }
 
