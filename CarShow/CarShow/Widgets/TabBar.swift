@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct TabBar: View {
-    var titles =  ["Model3","Model X","Model Y","Model Z" ]
+    var titles:[String]
     @State var selectedIndex = 0
     var body: some View {
         HStack() {
             ForEach(Array(titles.enumerated()), id: \.offset) { (index, title) in
+                Spacer()
                 VStack(spacing: 2) {
                     Button {
                         selectedIndex = index
@@ -20,14 +21,15 @@ struct TabBar: View {
                         Text(title)
                             .fontWeight(.semibold)
                             .foregroundColor(.black).opacity(selectedIndex == index ? 1 : 0.6)
-                            .padding(.horizontal,10)
+//                            .padding(.horizontal,10)
                     }
                     if index == selectedIndex {
                         Color(uiColor: .black)
-                            .frame(width: 20,height: 3)
+                            .frame(width: 25,height: 3)
                             .clipShape(Capsule())
                     }
                 }
+                Spacer()
             }
         }
     }
@@ -35,6 +37,6 @@ struct TabBar: View {
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabBar()
+        TabBar(titles:  ["Model3","Model X","Model Y","Model Z"])
     }
 }

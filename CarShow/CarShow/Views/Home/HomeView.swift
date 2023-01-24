@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     var order = 0
+    var titles =  ["Model3","Model X","Model Y","Model Z" ]
     var body: some View {
         ZStack {
             Color(#colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1))
@@ -16,7 +17,7 @@ struct HomeView: View {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading) {
                     HomeTopBar()
-                    TabBar()
+                    TabBar(titles: titles)
                         .frame(maxWidth: .infinity,alignment: .center)
                     Spacer()
                     
@@ -81,12 +82,13 @@ struct ProductView: View {
                 .cornerRadius(15)
             Text("Center USB Hub")
             HStack(spacing: 4) {
-                ForEach(0..<5){ item in
-                    Image(systemName: "star.fill")
-                        .resizable()
-                        .foregroundColor(.black)
-                        .frame(width: 18, height: 18)
-                }
+//                ForEach(0..<5){ item in
+//                    Image(systemName: "star.fill")
+//                        .resizable()
+//                        .foregroundColor(.black)
+//                        .frame(width: 18, height: 18)
+//                }
+                RatingsView()
                 Spacer()
                 Text("50$")
                     .fontWeight(.bold)

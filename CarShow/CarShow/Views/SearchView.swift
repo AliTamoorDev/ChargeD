@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
     @State var search:String = ""
+    var titles =  ["Results","Categories"]
     var body: some View {
         VStack(alignment: .leading) {
             Text("Search Products")
@@ -29,12 +30,28 @@ struct SearchView: View {
                     .stroke(.black, lineWidth: 2)
             )
             .padding(.horizontal)
-            
-            Text("Results")
-                .font(.title3)
-                .fontWeight(.semibold)
-                .padding(.top)
-                .padding(.horizontal)
+//            HStack {
+//                Button {
+//
+//                } label: {
+//                    Text("Results")
+//                        .font(.title3)
+//                        .fontWeight(.semibold)
+//                        .padding(.top)
+//                        .padding(.horizontal)
+//                }
+//                Spacer()
+//                Button {
+//
+//                } label: {
+//                    Text("Category")
+//                        .font(.title3)
+//                        .fontWeight(.semibold)
+//                        .padding(.top)
+//                        .padding(.horizontal)
+//                }
+//            }.padding(.horizontal)
+            TabBar(titles: titles).padding()
             SearchResult(image: Image("car3"))
             SearchResult(image: Image("car5"))
             Spacer()
@@ -50,7 +67,8 @@ struct SearchResult: View {
             image
                 .resizable()
                 .frame(width: 165, height: 120)
-                .cornerRadius(15)
+                .cornerRadius(9)
+                .padding([.leading,.vertical],10)
             
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
@@ -58,8 +76,12 @@ struct SearchResult: View {
                         .font(.headline)
                         .fontWeight(.medium)
                 }
-                .padding(.vertical)
-                VStack(alignment: .leading) {
+                .padding(.top)
+                Text("50$")
+                    .fontWeight(.semibold)
+                    .padding(.top,0.5)
+                HStack() {
+                    Spacer()
                     Button {
 
                     } label: {
@@ -69,15 +91,13 @@ struct SearchResult: View {
                             .foregroundColor(.black)
 
                     }
-                    Text("50$")
-                        .fontWeight(.semibold)
                 }
-                .frame(maxWidth: .infinity,alignment: .trailing)
-                .padding(.horizontal)
+                .frame(maxWidth: .infinity,alignment: .leading)
+                .padding(.trailing)
             }
         }
         .overlay(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: 12)
                 .stroke(.black, lineWidth: 0.5)
         )
         .padding(.horizontal,25)

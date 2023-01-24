@@ -57,13 +57,14 @@ struct CartProducts: View {
                         .fixedSize()
                         .padding()
                 }
-                .frame(height: 90)
+                .frame(height: 95)
                 .padding(.leading)
                 Spacer()
                 image
                     .resizable()
                     .frame(width: 110, height: 90)
-                    .cornerRadius(8)
+                    .cornerRadius(12)
+                    .padding([.bottom,.trailing],10)
                 
             }
         }
