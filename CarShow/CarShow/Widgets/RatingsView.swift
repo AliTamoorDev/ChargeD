@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RatingsView: View {
-    @State var currentRating: Int = 0
+    @State var currentRating: Int = 4
 //    var passedInRating: Int
 //    var updateRating: (Int) -> Void
     var maxRating = 5
