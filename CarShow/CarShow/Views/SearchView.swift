@@ -66,7 +66,7 @@ struct SearchResult: View {
         HStack(alignment: .top ) {
             image
                 .resizable()
-                .frame(width: 165, height: 120)
+                .frame(width: 140, height: 100)
                 .cornerRadius(9)
                 .padding([.leading,.vertical],10)
             
@@ -75,32 +75,34 @@ struct SearchResult: View {
                     Text("Center USB Hub")
                         .font(.headline)
                         .fontWeight(.medium)
-                }
-                .padding(.top)
-                Text("50$")
-                    .fontWeight(.semibold)
-                    .padding(.top,0.5)
-                HStack() {
-                    Spacer()
-                    Button {
-
-                    } label: {
-                        Image(systemName: "heart")
-                            .resizable()
-                            .frame(width: 27,height: 25)
-                            .foregroundColor(.black)
-
+                        .padding(.top)
+                        .padding(.bottom,30)
+                    
+                    HStack() {
+                        Text("50$")
+                            .fontWeight(.semibold)
+                            .padding(.top,0.5)
+                        Spacer()
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "heart")
+                                .resizable()
+                                .frame(width: 27,height: 25)
+                                .foregroundColor(.black)
+                            
+                        }
                     }
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                    .padding(.trailing)
                 }
-                .frame(maxWidth: .infinity,alignment: .leading)
-                .padding(.trailing)
             }
         }
         .overlay(
             RoundedRectangle(cornerRadius: 12)
                 .stroke(.black, lineWidth: 0.5)
         )
-        .padding(.horizontal,25)
+        .padding(.horizontal,28)
         .padding(.bottom,5)
 //        .background(Color(.gray))
     }
