@@ -20,12 +20,12 @@ struct TabBar: View {
                     } label: {
                         Text(title)
                             .fontWeight(.semibold)
-                            .foregroundColor(.black).opacity(selectedIndex == index ? 1 : 0.6)
+                            .foregroundColor(ColorConstants.secondaryColorBlack).opacity(selectedIndex == index ? 1 : 0.6)
 //                            .padding(.horizontal,10)
                     }
                     if index == selectedIndex {
-                        Color(uiColor: .black)
-                            .frame(width: 25,height: 3)
+                        ColorConstants.primaryColorGreen
+                            .frame(width: 26,height: 3.5)
                             .clipShape(Capsule())
                     }
                 }

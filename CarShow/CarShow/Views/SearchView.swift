@@ -21,13 +21,14 @@ struct SearchView: View {
                 
                 Image(systemName: "magnifyingglass")
                     .padding(.leading)
+                    .foregroundColor(ColorConstants.primaryColorGreen)
                 TextField("Search Items", text: $search)
                 
             }
             .padding(.vertical)
             .overlay(
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke(.black, lineWidth: 2)
+                    .stroke(ColorConstants.secondaryColorBlack, lineWidth: 2)
             )
             .padding(.horizontal)
 //            HStack {
@@ -89,7 +90,7 @@ struct SearchResult: View {
                             Image(systemName: "heart")
                                 .resizable()
                                 .frame(width: 27,height: 25)
-                                .foregroundColor(.black)
+                                .foregroundColor(ColorConstants.secondaryColorBlack)
                             
                         }
                     }

@@ -23,7 +23,7 @@ struct CategoryView: View {
                     AddFromFavStack()
                     CalculateTotalStack()
                 }
-                .background(Color(#colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1))
+                .background(ColorConstants.bgColorGray
                     .ignoresSafeArea())
                 .cornerRadius(15)
                 .padding(.vertical)
@@ -70,7 +70,7 @@ struct CartProducts: View {
         }
         .overlay(
             RoundedRectangle(cornerRadius: 8)
-                .stroke(.black, lineWidth: 0.8)
+                .stroke(ColorConstants.secondaryColorBlack, lineWidth: 0.8)
         )
         .padding(.horizontal,25)
     }
@@ -78,20 +78,20 @@ struct CartProducts: View {
 
 struct AddFromFavStack: View {
     var body: some View {
-        Color(uiColor: .gray)
+        ColorConstants.darkGray
             .frame(maxWidth: .infinity,maxHeight: 0.5)
             .clipShape(Capsule())
         HStack {
             Image(systemName: "heart")
                 .resizable()
                 .frame(width: 27,height: 24)
-                .foregroundColor(.black)
-                .padding()
+                .foregroundColor(ColorConstants.secondaryColorBlack)
+                .padding([.top,.horizontal])
             VStack(alignment: .leading) {
                 Text("Add from Favourites")
                     .font(.headline)
                 Text("0 Items Added")
-                    .foregroundColor(.gray)
+                    .foregroundColor(ColorConstants.darkGray)
             }
             .padding(.vertical)
             Spacer()
@@ -101,7 +101,7 @@ struct AddFromFavStack: View {
                 Image(systemName: "greaterthan")
                     .resizable()
                     .frame(width: 10,height: 15)
-                    .foregroundColor(.black)
+                    .foregroundColor(ColorConstants.secondaryColorBlack)
                     .padding()
             }
         }
@@ -112,14 +112,14 @@ struct AddFromFavStack: View {
 struct CalculateTotalStack: View {
     var body: some View {
         VStack {
-            Color(uiColor: .gray)
+            ColorConstants.darkGray
                 .frame(maxWidth: .infinity,maxHeight: 0.5)
                 .clipShape(Capsule())
             HStack {
                 Image(systemName: "tag.fill")
                     .resizable()
                     .frame(width: 27,height: 24)
-                    .foregroundColor(.black)
+                    .foregroundColor(ColorConstants.secondaryColorBlack)
                     .padding(.trailing)
                 Text("Apply Discount Or Gift Card Code")
                     .font(.headline)
@@ -150,7 +150,7 @@ struct CalculateTotalStack: View {
             .padding(.horizontal)
             .padding(.top,1)
             
-            Color(uiColor: .gray)
+            ColorConstants.darkGray
                 .frame(maxWidth: .infinity,maxHeight: 0.5)
                 .clipShape(Capsule())
             HStack {
@@ -166,17 +166,17 @@ struct CalculateTotalStack: View {
             } label: {
                 Text("Checkout")
                     .fontWeight(.bold)
-                    .foregroundColor(.white)
+                    .foregroundColor(ColorConstants.bgColorWhite)
                     .frame(width: 320,height: 60)
                     .background(content: {
-                        Color(.black)
+                        ColorConstants.primaryColorGreen
                     })
                     .cornerRadius(60)
                     .padding()
             }
 
         }
-        .padding()
+        .padding([.bottom,.horizontal])
     }
 }
 

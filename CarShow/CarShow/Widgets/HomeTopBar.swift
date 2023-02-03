@@ -24,7 +24,7 @@ struct HomeTopBar: View {
             Spacer()
             Image("logo")
                 .resizable()
-                .foregroundColor(.black)
+                .foregroundColor(ColorConstants.secondaryColorBlack)
                 .frame(width: 150, height: 30)
         }.padding(.bottom,5)
     }

@@ -12,7 +12,7 @@ struct HomeView: View {
     var titles =  ["Model3","Model X","Model Y","Model Z" ]
     var body: some View {
         ZStack {
-            Color(#colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.937254902, alpha: 1))
+            ColorConstants.bgColorGray
                 .ignoresSafeArea()
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading) {
@@ -97,7 +97,7 @@ struct ProductView: View {
         .frame(width: 200)
         .padding()
         .background {
-            Color(.white)
+            ColorConstants.bgColorWhite
         }
         .cornerRadius(15)
         .overlay(

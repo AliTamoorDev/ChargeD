@@ -12,7 +12,7 @@ struct RatingsView: View {
 //    var passedInRating: Int
 //    var updateRating: (Int) -> Void
     var maxRating = 5
-    var color:UIColor = UIColor.black
+    var color = ColorConstants.tertiaryColor
     var width: Int = 25
     var fillImageName = "star.fill"
     var openImageName = "star"
@@ -23,7 +23,7 @@ struct RatingsView: View {
                 Image(systemName: rating < currentRating ? fillImageName : openImageName)
                     .resizable()
                     .scaledToFit()
-                    .foregroundColor(Color(self.color))
+                    .foregroundColor(self.color)
                     .onTapGesture {
                         currentRating = rating + 1
 //                        if thisBook != nil {

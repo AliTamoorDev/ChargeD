@@ -22,7 +22,7 @@ struct Profile: View {
                         Image(systemName: "square.and.arrow.down")
                             .resizable()
                             .rotationEffect(.degrees(270))
-                            .foregroundColor(.black)
+                            .foregroundColor(ColorConstants.secondaryColorBlack)
                             .frame(width: 22,height: 25)
                             .padding(.trailing,2)
                     }
@@ -36,11 +36,13 @@ struct Profile: View {
                     Image(systemName: "person.crop.circle")
                         .resizable()
                         .frame(width: 40,height: 40)
+                        .foregroundColor(ColorConstants.primaryColorGreen)
                     Text("Account Name")
                     .font(.title3)
-                    .fontWeight(.semibold)
+//                    .fontWeight(.semibold)
+                    .foregroundColor(ColorConstants.secondaryColorBlack)
                     Text("example@dummy.com")
-                    Color(uiColor: .gray)
+                    ColorConstants.darkGray
                         .frame(maxWidth: .infinity,maxHeight: 0.3)
                         .clipShape(Capsule())
                         .padding(.horizontal)
@@ -51,7 +53,7 @@ struct Profile: View {
                 AccountSubMenu(image: "rectangle.and.pencil.and.ellipsis", menuTitle: "Reviews")
                 AccountSubMenu(image: "truck", imageAsset: Image("truck"), menuTitle: "Shipping Address")
                 AccountSubMenu(image: "dollarsign.circle", menuTitle: "Currency")
-                Color(uiColor: .gray)
+                ColorConstants.darkGray
                     .frame(maxWidth: .infinity,maxHeight: 0.3)
                     .clipShape(Capsule())
                     .padding(.horizontal)
@@ -77,12 +79,12 @@ struct AccountSubMenu: View {
             if let img = imageAsset {
                 img.resizable()
                     .frame(width: 26.5,height: 28)
-                    .foregroundColor(.gray)
+                    .foregroundColor(ColorConstants.darkGray)
                     .padding()
             } else {
                 Image(systemName: image).resizable()
                     .frame(width: 25,height: 23)
-                    .foregroundColor(.gray)
+                    .foregroundColor(ColorConstants.darkGray)
                     .padding()
             }
             VStack(alignment: .leading) {
@@ -90,7 +92,7 @@ struct AccountSubMenu: View {
                     .font(.title3).fontWeight(.semibold)
                 if let menuSubTitle = menuSubTitle{
                     Text("\(menuSubTitle)")
-                        .foregroundColor(.gray)
+                        .foregroundColor(ColorConstants.darkGray)
                 }
             }
 //            .padding(.vertical)
@@ -101,7 +103,7 @@ struct AccountSubMenu: View {
                 Image(systemName: "greaterthan")
                     .resizable()
                     .frame(width: 10,height: 13)
-                    .foregroundColor(.black)
+                    .foregroundColor(ColorConstants.secondaryColorBlack)
                     .padding(.trailing)
             }
         }
