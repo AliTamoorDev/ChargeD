@@ -16,6 +16,10 @@ https://www.hackingwithswift.com/example-code/language/what-is-a-tuple
 ---Drawer
 https://www.google.com/search?q=app+navigation+drawer&tbm=isch&ved=2ahUKEwiCirnxmPn8AhWCkScCHYDfCPkQ2-cCegQIABAA&oq=app+navigation+drawer&gs_lcp=CgNpbWcQAzIGCAAQBxAeMggIABAFEAcQHjoECCMQJzoFCAAQgARQmQ1YiB1gxx5oAHAAeACAAbgFiAGGGpIBCTItNy4yLjEuMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=uujcY4LFOIKjnsEPgL-jyA8&bih=1247&biw=2560#imgrc=v0ZMy2EPiSMaoM
 
+https://www.youtube.com/watch?v=WB9UT9SYfC4
+
+https://levelup.gitconnected.com/creating-navigation-drawer-with-swiftui-891663dd32d2
+
 https://www.youtube.com/watch?v=wxvtJuR_erU
 
 https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
