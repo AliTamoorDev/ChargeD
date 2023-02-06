@@ -14,7 +14,7 @@ struct DrawerView: View {
             DrawerMenus()
             TabView {
                 Text("asd")
-                HomeView().tag(")
+//                HomeView().tag(")
             }
 //            .frame(maxWidth: .infinity)
             .frame(width: UIScreen.main.bounds.width)
