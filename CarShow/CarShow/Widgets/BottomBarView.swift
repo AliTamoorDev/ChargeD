@@ -34,7 +34,11 @@ struct BottomBarView: View {
     var profileMenu = BottomMenu(menuView: {
         Profile()
     },menuName: "Account",menuImage: "person.crop.circle",order: 3)
+    var siteVisit = BottomMenu(menuView: {
+        SiteRequestView()
+    }, menuName: "Request Visit",menuImage: "box.truck.badge.clock.fill",order: 4)
     
+//    SiteRequestVIew
     var body: some View {
         VStack{
             TabView {
@@ -60,6 +64,12 @@ struct BottomBarView: View {
                     VStack{
                         Image(systemName: profileMenu.menuImage)
                         Text(profileMenu.menuName)
+                    }
+                }
+                siteVisit.menuView.tabItem {
+                    VStack{
+                        Image(systemName: siteVisit.menuImage)
+                        Text(siteVisit.menuName)
                     }
                 }
             }
