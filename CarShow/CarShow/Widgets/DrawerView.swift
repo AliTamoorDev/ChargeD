@@ -9,7 +9,11 @@ import SwiftUI
 import VTabView
 
 struct DrawerView: View {
+    init(){
+        UITabBar.appearance().isHidden = true
+    }
     var body: some View {
+       
         HStack {
             DrawerMenus()
             TabView {
@@ -21,7 +25,7 @@ struct DrawerView: View {
         }
 //        .frame(maxWidth: .infinity)
 //        .frame(width: UIScreen.main.bounds.width)
-        .offset(x: 100)
+//        .offset(x: 100)
         
     }
 }
