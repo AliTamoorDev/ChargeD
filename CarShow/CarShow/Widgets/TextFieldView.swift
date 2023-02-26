@@ -11,12 +11,12 @@ struct TextFieldView:View {
     
     var fieldName: String
     var menuImage: String?
-    @State var fieldText: String = ""
+    @Binding var fieldText: String
     
-    init(fieldName: String, menuImage: String = "", fieldText: String) {
+    init(fieldName: String, menuImage: String = "", fieldText: Binding<String>) {
         self.fieldName = fieldName
         self.menuImage = menuImage
-        self.fieldText = fieldText
+        self._fieldText = fieldText
     }
     
     var body: some View {
@@ -39,6 +39,6 @@ struct TextFieldView:View {
 
 struct TextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        TextFieldView(fieldName: "FieldName", fieldText: "")
+        TextFieldView(fieldName: "FieldName", fieldText: .constant(""))
     }
 }
