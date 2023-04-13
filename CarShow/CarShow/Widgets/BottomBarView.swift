@@ -35,7 +35,7 @@ struct BottomBarView: View {
         Profile()
     },menuName: "Account",menuImage: "person.crop.circle",order: 3)
     var siteVisit = BottomMenu(menuView: {
-        SiteRequestView()
+        SiteRequestView(mapsLocation: "", temp: .constant(""))
     }, menuName: "Request Visit",menuImage: "box.truck.badge.clock.fill",order: 4)
     
 //    SiteRequestVIew

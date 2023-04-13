@@ -13,6 +13,7 @@
 		325EED982997F4C6006F2E23 /* DropdownMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325EED942997F4C6006F2E23 /* DropdownMenuList.swift */; };
 		325EED992997F4C6006F2E23 /* DropdownMenuListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325EED952997F4C6006F2E23 /* DropdownMenuListRow.swift */; };
 		325EED9A2997F4C6006F2E23 /* DropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325EED962997F4C6006F2E23 /* DropdownMenu.swift */; };
+		32F496CD29AA626C00170C52 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F496CC29AA626C00170C52 /* MapView.swift */; };
 		DC39D6AF2980196800E3FC47 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC39D6AE2980196800E3FC47 /* RatingsView.swift */; };
 		DC4D8520295D9DC600A49471 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4D851F295D9DC600A49471 /* BottomBar.swift */; };
 		DC4D8522295DACE500A49471 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4D8521295DACE500A49471 /* TabBar.swift */; };
@@ -39,6 +40,7 @@
 		325EED942997F4C6006F2E23 /* DropdownMenuList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuList.swift; sourceTree = "<group>"; };
 		325EED952997F4C6006F2E23 /* DropdownMenuListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuListRow.swift; sourceTree = "<group>"; };
 		325EED962997F4C6006F2E23 /* DropdownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenu.swift; sourceTree = "<group>"; };
+		32F496CC29AA626C00170C52 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DC39D6AE2980196800E3FC47 /* RatingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		DC4D851F295D9DC600A49471 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		DC4D8521295DACE500A49471 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				DC4D852A295DBD4200A49471 /* CategoryView.swift */,
 				DC4D852E295DC5DB00A49471 /* Profile.swift */,
 				DC71FBB72991091A003D8AD8 /* SiteRequestView.swift */,
+				32F496CC29AA626C00170C52 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				DCF68F18295D667800E4486F /* CarShowApp.swift in Sources */,
 				325EED972997F4C6006F2E23 /* DropdownMenuOption.swift in Sources */,
 				DC4D8520295D9DC600A49471 /* BottomBar.swift in Sources */,
+				32F496CD29AA626C00170C52 /* MapView.swift in Sources */,
 				DC4D852D295DC5D200A49471 /* SearchView.swift in Sources */,
 				DC4D8528295DBD1D00A49471 /* HomeView.swift in Sources */,
 				DCF3905B298D1FC8002ED6AB /* DrawerView.swift in Sources */,

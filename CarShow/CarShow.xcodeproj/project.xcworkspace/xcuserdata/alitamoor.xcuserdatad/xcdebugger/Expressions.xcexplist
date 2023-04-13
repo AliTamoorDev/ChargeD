@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in closure #1 in closure #1 in MapView.body.getter:MapView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "locationCordinates">
+            </PersistentString>
+            <PersistentString
+               value = "mapVM.locationCordinates">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in MapViewModel.locationManager(_:didUpdateLocations:):MapView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.locationCordinates">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
